@@ -61,8 +61,14 @@ body {
     gap: calc(8px + 0.75svh);
     text-wrap: nowrap;
 
-    .icon {
-      max-width: 40px;
+    .link {
+      display: flex;
+      flex-direction: row;
+      gap: calc(4px + .75svh);
+
+      img {
+        width: 20px;
+      }
     }
 
     nav {
@@ -72,6 +78,7 @@ body {
         display: flex;
         flex-direction: row;
         gap: 16px;
+        justify-content: space-between;
 
         a {
           font-size: calc(10px + .75svh);
@@ -116,14 +123,4 @@ body {
 .content-wrapper {
   display: flex;
   flex-direction: column;
-}
-
-.github-link {
-  display: flex;
-  flex-direction: row;
-  gap: calc(4px + .75svh);
-
-  img {
-    width: 24px;
-  }
 }
