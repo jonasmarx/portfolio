@@ -1,0 +1,129 @@
+---
+---
+
+@import "reset";
+
+$primary-color: #202020;
+$secondary-color: #51311f;
+
+$primary-text-color: #f1e9d5;
+$contrast-text-color: #8b9244;
+$highlight-text-color: #755338;
+
+body {
+  font-family: sans-serif;
+  background-color: $primary-color;
+  font-size: calc(10px + .75svh);
+  color: $primary-text-color;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: calc(16px + .75svh) calc(12px + .75svh) 0 calc(12px + .75svh);
+
+  h1,h2,h3 {
+    color: $primary-text-color;
+  }
+
+  h1 {
+    font-size: calc(18px + .75svh);
+  }
+
+  h2 {
+    font-size: calc(14px + .75svh);
+  }
+
+  h3 {
+    font-size: calc(12px + .75svh);
+  }
+
+  a {
+    color: $primary-text-color;
+
+    &:hover {
+      color: #9f9b8c;
+    }
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  gap: calc(32px + 0.75svh);
+
+  padding-bottom: calc(16px + .75svh);
+
+  border-bottom: 2px solid $secondary-color;
+
+  .display-area {
+    display: flex;
+    flex-direction: column;
+    gap: calc(8px + 0.75svh);
+    text-wrap: nowrap;
+
+    .icon {
+      max-width: 40px;
+    }
+
+    nav {
+      min-height: 0px;
+
+      ul {
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+
+        a {
+          font-size: calc(10px + .75svh);
+        }
+      }
+    }
+  }
+
+  .navigation {
+    align-self: center;
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      gap: 16px;
+
+      text-align: center;
+
+      li {
+        min-width: calc(80px + .75svh);
+
+        border-bottom-width: 2px;
+        border-bottom-style: solid;
+        border-bottom-color: $secondary-color;
+      }
+
+      a {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+      }
+    }
+  }
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.github-link {
+  display: flex;
+  flex-direction: row;
+  gap: calc(4px + .75svh);
+
+  img {
+    width: 24px;
+  }
+}

@@ -4,21 +4,28 @@
         <meta charset="utf-8">
         <title>{{ page.title }}</title>
         <meta property="description" content="{{ page.description }}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
     </head>
     <body>
-        <header>
-            <div>
-                <h2>Jonas Marx</h2>
-                <ul>
-                    <li>
-                        <a href="https://github.com/jonasmarx">Github</a>
-                    </li>
-                    <li>
-                        <a mailto="jonas_marx1@web.de">Mail</a>
-                    </li>
-                </ul>
+        <header class="header">
+            <div class="display-area">
+                <h3>Jonas Marx</h3>
+                <nav>
+                    <ul>
+                        <li>
+                            <a class="github-link" target="_blank" href="https://github.com/jonasmarx">
+                                Github
+                                <img src="/assets/img/github.svg" alt="Github">
+                            </a>
+                        </li>
+                        <li>
+                            <a mailto="jonas_marx1@web.de">Mail</a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
-            <nav>
+            <nav class="navigation">
                 <ul>
                     <li>
                         <a href="/">Home</a>
@@ -27,14 +34,19 @@
                         <a href="/about-me">About Me</a>
                     </li>
                     <li>
-                        <a href="/projects-and-articles">Projects / Articles</a>
+                        <a href="/projects">Projects</a>
+                    </li>
+                    <li>
+                        <a href="/articles">Articles</a>
                     </li>
                 </ul>
             </nav>
         </header>
-        <h1> {{ page.title }} </h1>
-        <section>
-            {{ content }}
-        </section>
+        <div class="page-wrapper" >
+            <h1> {{ page.title }} </h1>
+            <section class="content-wrapper">
+                {{ content }}
+            </section>
+        </div>
     </body>
 </html>
