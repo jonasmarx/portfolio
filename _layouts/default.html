@@ -5,7 +5,7 @@
         <title>{{ page.title }}</title>
         <meta property="description" content="{{ page.description }}">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
+        <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css" />
     </head>
     <body>
         <header class="header">
@@ -15,17 +15,17 @@
                     <ul>
                         <li>
                             <a class="link" target="_blank" href="https://github.com/jonasmarx">
-                                <img src="{{ '/assets/img/github.svg' | relative_url }}" alt="Github">
+                                <img src="{{ site.baseurl }}/assets/img/github.svg" alt="Github">
                             </a>
                         </li>
                         <li>
                             <a class="link" target="_blank" href="https://www.linkedin.com/in/jonas-marx-367436193/">
-                                <img src="{{ '/assets/img/linkedin.svg' | relative_url }}" alt="LinkedIn">
+                                <img src="{{ site.baseurl }}assets/img/linkedin.svg" alt="LinkedIn">
                             </a>
                         </li>
                         <li>
                             <a class="link" mailto="jonas_marx1@web.de">
-                                <img src="{{ '/assets/img/email.svg' | relative_url }}" alt="Email">
+                                <img src="{{ site.baseurl }}/assets/img/email.svg" alt="Email">
                             </a>
                         </li>
                     </ul>
@@ -34,16 +34,16 @@
             <nav class="navigation">
                 <ul>
                     <li>
-                        <a href="/">Home</a>
+                        <a href="{{ site.baseurl }}/">Home</a>
                     </li>
                     <li>
-                        <a href="/about-me">About Me</a>
+                        <a href="{{ site.baseurl }}/about-me">About Me</a>
                     </li>
                     <li>
-                        <a href="/projects">Projects</a>
+                        <a href="{{ site.baseurl }}/projects">Projects</a>
                     </li>
                     <li>
-                        <a href="/articles">Articles</a>
+                        <a href="{{ site.baseurl }}/articles">Articles</a>
                     </li>
                 </ul>
             </nav>
