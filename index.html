@@ -1,7 +1,40 @@
 ---
 title: Home
 layout: default
-description: Portfolio / Blog / Something of Jonas Marx. I'll try to document smaller projects I'm planning on doing, also might give writing blog post on stuff I find interesing a shot.
+description: Portfolio / Blog / Something of Jonas Marx. I'll try to document smaller projects I'm planning on doing, also might give writing blog post on stuff I find interesting a shot.
+css: index
 ---
 
-<h2> Welcome to my home </h2>
+<section class="introduction">
+    <div class="introduction-text">
+        <p>
+            Welcome to my simple Portfolio / Blog / what do I know Website.
+        </p>
+        <p>
+            This is the place where I curate most of what I do in regard to programming in my free time. </br>
+            Be it documenting projects I'm working on, dumping my opinion or thoughts on tech related topics or giving writing articles on topics I like an attempt. </br>
+            </br>
+        </p>
+
+        <h3> Why does this page look like it comes from the early 2000s?</h3>
+        <p>
+            I intentionally decided to make whatever this is or becomes very simple/plain and not some bloated show off,
+            becuase in times when everything is overloaded, over complived, bloated and fast moving, having simple things that work relyably and dont try to be more than what they are actually are is worth alot.
+        </p>
+    </div>
+    <div class="introduction-image-wrapper">
+        <img src="{{ site.baseurl }}/assets/img/snufkin-white.png" alt="snufkin sketch drawing">
+    </div>
+</section>
+
+<section class="recent-posts">
+    <h3>All Posts</h3>
+
+    <ul>
+        {% for post in site.posts %}
+            <li>
+                <a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</section>

@@ -1,0 +1,23 @@
+---
+---
+
+@import "colors";
+@import "breakpoints";
+
+.introduction {
+  display: flex;
+  flex-direction: column;
+  gap: calc(12px + .75svh);
+
+  &-image-wrapper {
+    max-width: 300px;
+  }
+
+  &-text {
+    max-width: 50%;
+
+    @media(max-width: $layout-breakpoint-s) {
+      max-width: 100%;
+    }
+  }
+}

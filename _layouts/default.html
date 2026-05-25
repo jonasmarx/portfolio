@@ -6,6 +6,9 @@
         <meta property="description" content="{{ page.description }}">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css" />
+        {% if page.css %}
+            <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/{{ page.css }}.css">
+        {% endif %}
     </head>
     <body>
         <header class="header">
@@ -20,7 +23,7 @@
                         </li>
                         <li>
                             <a class="link" target="_blank" href="https://www.linkedin.com/in/jonas-marx-367436193/">
-                                <img src="{{ site.baseurl }}assets/img/linkedin.svg" alt="LinkedIn">
+                                <img src="{{ site.baseurl }}/assets/img/linkedin.svg" alt="LinkedIn">
                             </a>
                         </li>
                         <li>
