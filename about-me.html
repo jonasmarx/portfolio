@@ -1,7 +1,59 @@
 ---
 title: About me
 layout: default
-description: TBD.
+description: Read about me, what I do in regard to programming and also some other stuff
+css: about-me
 ---
 
-<h2> Backend Developer </h2>
+{% assign birthday = "2000-10-06" %}
+{% assign birth_year = birthday | date: "%Y" | plus: 0 %}
+{% assign birth_month_and_day = birthday | date: "%m%d" | plus: 0 %}
+{% assign now_year = "now" | date: "%Y" | plus: 0 %}
+{% assign now_month_and_day = "now" | date: "%m%d" | plus: 0 %}
+
+{% assign age = now_year | minus: birth_year %}
+{% if now_month_and_day < birth_month_and_day %}
+    {% assign age = age | minus: 1 %}
+{% endif %}
+
+<div class="me-section">
+    <h2> My person </h2>
+    <p>
+        My name is Jonas Marx, I'm {{ age }} years old, I like programming, working out in the gym, music and movies just like most people.
+    </p>
+
+    <div class="about-me-image-wrapper">
+        <img src="{{ site.baseurl }}/assets/img/dust-spirit.jpg" alt="dust spirits drawing">
+    </div>
+</div>
+
+<div class="career-section">
+    <div>
+        <h2> Career </h2>
+        <p>I would label my self as a <b>Backend Developer</b>, though I'm also interested in <b>Frontend</b> and <b>DevOps</b>, snice I like understanding things in completion/being able to do things in completion.</p>
+    </div>
+    <div class="experience-section">
+        <h2> Experiences </h2>
+        <table class="experience-table">
+            <thead>
+                <tr>
+                    <th>Timespan</th>
+                    <th>Company</th>
+                    <th>Role</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2023 - now</td>
+                    <td>ROSE Bikes GmbH</td>
+                    <td>Full-Time Backend Developer</td>
+                </tr>
+                <tr>
+                    <td>2020 - 2023</td>
+                    <td>ROSE Bikes GmbH</td>
+                    <td>Apprenticeship in Software Development</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

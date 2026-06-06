@@ -1,0 +1,32 @@
+---
+---
+
+@import "colors";
+@import "breakpoints";
+
+.career-section {
+  display: flex;
+  flex-direction: column;
+  gap: calc(8px + .75svh);
+}
+
+.experience-table {
+  border-collapse: collapse;
+
+  th {
+    text-align: left;
+    padding-right: calc(16px + .75svh);
+    padding-bottom: calc(4px + .25svh);
+    vertical-align: top;
+  }
+
+  td {
+    padding-right: calc(16px + .75svh);
+    padding-bottom: calc(4px + .25svh);
+    vertical-align: top;
+  }
+}
+
+.about-me-image-wrapper {
+  max-width: 150px;
+}
